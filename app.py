@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 from utils import process_text
-from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
