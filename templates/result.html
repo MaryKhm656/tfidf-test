@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Результаты анализа</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        body {
+            font-family: sans-serif;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <h1>Результаты анализа</h1>
+    <table>
+        <tr>
+            <th>Слово</th>
+            <th>TF</th>
+            <th>IDF</th>
+        </tr>
+        {% for item in words %}
+        <tr>
+            <td>{{ item.word }}</td>
+            <td>{{ item.tf }}</td>
+            <td>{{ item.idf }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

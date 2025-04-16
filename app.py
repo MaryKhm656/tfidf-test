@@ -32,6 +32,6 @@ def upload_file():
     if uploaded_file.filename.endswith(".txt"):
         content = uploaded_file.read().decode("utf-8")
         words = process_text(content)
-        return str(words)
+        return render_template("result.html", words=words)
     else:
         return "Пожалуйста, загрузите .txt файл"
