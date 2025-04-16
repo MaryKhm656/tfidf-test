@@ -15,7 +15,6 @@
 - Python 3
 - Flask
 - Jinja2
-- collections.Counter
 - HTML (базовый шаблон)
 
 ## Структура проекта
